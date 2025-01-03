@@ -83,3 +83,29 @@ type scalePower = "minimum" | "medium" | "maximum"
 
 const power: scalePower = "medium"
 
+// Funtions
+
+function hi(name: string): void {
+  console.log("Hi,", name)
+}
+
+function bye(name: string): string  {
+  return "Bye, " + name
+}
+
+const sum = (a: number, b?: number) => {
+  return b ? a + b : null
+}
+sum(1,3) // 4
+sum(1) // null
+
+
+
+let functionTotal: Function
+functionTotal = hi
+//functionTotal = "" //Da error por que no asignas una funcion 
+
+
+function generadoError(message: string): never {
+  throw new Error(message)
+}
