@@ -109,3 +109,42 @@ functionTotal = hi
 function generadoError(message: string): never {
   throw new Error(message)
 }
+
+
+// POO
+type genderType = 'M' | 'F'
+
+class Person {
+  gender: genderType
+  readonly age: number
+  static race = 'human'
+
+  constructor(gender: genderType, age: number){
+    this.gender = gender
+    this.age = age
+  }
+
+
+  public sayHello(){
+    console.log("Hi my gender is", this.gender)
+  }
+
+  setGender(gender: genderType){
+    this.gender = gender
+  }
+}
+
+class Developer extends Person{
+  language: string
+
+  constructor(language: string, gender: genderType, age:number){
+    super(gender,age)
+    this.language = language
+  }
+}
+
+const person = new Person('M', 22)
+const dev = new Developer('js','F', 18, )
+
+
+
