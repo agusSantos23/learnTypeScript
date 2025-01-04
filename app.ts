@@ -147,4 +147,22 @@ const person = new Person('M', 22)
 const dev = new Developer('js','F', 18, )
 
 
+// generics & casting
 
+function indentity<T, Z>(arg: T, ar: Z): T {
+  return arg
+}
+
+const str = indentity<string, number>('one', 3)
+const num = indentity<number, string>(3, 'a')
+
+
+interface Person {
+  name: string
+}
+
+const object = {
+  name: 'John'
+} as Person
+
+const item = 'hi' as any as number
